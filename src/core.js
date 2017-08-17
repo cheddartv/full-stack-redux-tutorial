@@ -4,6 +4,14 @@ export function setEntries(state, entries) {
   return state.set('entries', List(entries))
 }
 
+function getWinners(vote) {
+  if (!vote) return [];
+
+  const [a, b] = vote.get('pair')
+  const aVotes = vote.getIn(['tally', a], 0)
+  const bVotes = vote.getIn(['tally', b], 0)
+}
+
 export function next(state) {
   const entries = state.get('entries')
   return state.merge({
