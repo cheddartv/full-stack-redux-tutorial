@@ -54,7 +54,7 @@ describe('application logic', () => {
         vote: Map({
           pair: List.of('Sunshine', 'Millions')
         }),
-        entries: List.of.('127 Hours', 'Trainspotting')
+        entries: List.of('127 Hours', 'Trainspotting')
       }))
     })
 
