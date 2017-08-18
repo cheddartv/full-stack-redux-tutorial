@@ -17,7 +17,7 @@ function getWinners(vote) {
 }
 
 export function next(state) {
-  const entries = state.get('entries')
+  const entries = state.get('entries').concat(getWinners(state.get('vote')))
   return state.merge({
     vote: Map({pair: entries.take(2)}),
     entries: entries.skip(2)
